@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: jDCr/jDzAcgvMiqKehy6l2gfDvtQd8yma/q61BBflsR0X46lCaUlwNWKCQK3dYwdn7MgYLTeZ0Ec9NgQUXvWF3X+VORaiCXBBMoVSl8WUF6pBuR2XSnS5J6ZjXsDMm6IMJHgnVF/MnjPMf9/lbjXPiQjm9xieZYhsa1sScI6bSlo3JYquQGZmg1Hw5kh3DGVNMUXEM5f77/kYR1wf4x094UnVzL+kHVt3qTIHbAsIx75peKjrq7AyoKYOE9Vbp0Cl0tppv6aRvrXbkfwk6KWOIX403CuQ4DIl5eAYxoTsZ+nDbu/slAQ5Pgumfs5sTrb+CcnhdM7ruLtxtRJgc0kt7Prapuz4bnyWrdS8StyXe/kRppIh8PdzvAREds+wwdUiEC2yJ4VBN1q+EAzia1x6q6w45qzwt6+TPB7lBAiFMbxFfSiYz6ClzNHCSysKkwplPtcpdGdjhfagc1abSSR698rQm9bWBeGHZ6wezVDlzrKK4vXqR2+MDHJR/Sp9Lm+o/Jyutat2ilyG6dGIWhBMJcDz8HZ/aTaC1WKWFUhmDJJj6R4fy9XOgchaR6jGBCNtPdFSB9GExFCfWduM35v9j2mvRno2LO4ry+o33cEJc97yJPGoT6EcqRut+aqamIRDHgQhIloI2lweZTjLNDYymyUWhcEqcSE+wo1SRs4YY4=
+  app: serene-dawn-19882
+  on:
+    repo: catperez81/node-shopping-list-integration-tests-master
