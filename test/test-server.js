@@ -14,7 +14,7 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 
-describe('Shopping List', function() {
+describe('Shopping List', 'Recipes', function() {
 
   // Before our tests run, we activate the server. Our `runServer`
   // function returns a promise, and we return the that promise by
@@ -144,13 +144,6 @@ describe('Shopping List', function() {
 });
 
 
-describe('Recipes', function() {
-  before(function() {
-    return runServer();
-  });
-  after(function() {
-    return closeServer();
-  });
   // test strategy:
   //   1. make request to `/recipes`
   //   2. inspect response object and prove has right code and have
@@ -184,7 +177,7 @@ describe('Recipes', function() {
         expect(res).to.have.status(201);
         expect(res).to.be.json;
         expect(res.body).to.be.a('object');
-        expect(res.body).to.include.keys('id', 'name', 'checked');
+        expect(res.body).to.include.keys('name', 'ingredients');
         expect(res.body.id).to.not.equal(null);
         // response should be deep equal to `newItem` from above if we assign
         // `id` to it from `res.body.id`
@@ -238,4 +231,3 @@ describe('Recipes', function() {
         expect(res).to.have.status(204);
       });
   });
-});
